@@ -1,0 +1,13 @@
+---
+import MenuItem from "./MenuItem.astro";
+
+interface Props {
+  links: Array<Object>;
+}
+
+const { links } = Astro.props;
+---
+
+<ul class="flex gap-6">
+  {links.map((link) => <MenuItem title={link.title} slug={link.slug} />)}
+</ul>
